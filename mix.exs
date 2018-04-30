@@ -7,7 +7,18 @@ defmodule Bartender.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
+      description: "JWT authentication using Absinthe + Guardian",
+      package: package(),
       deps: deps()
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      maintainers: "Cameron Irmas",
+      links: %{"GitHub" => "https://github.com/camirmas/bartender"},
+      source_url: "https://github.com/camirmas/bartender",
     ]
   end
 
