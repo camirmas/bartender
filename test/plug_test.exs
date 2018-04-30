@@ -19,8 +19,7 @@ defmodule BartenderPlugTest do
       assert Bartender.Plug.call(conn, GuardianHelper)
     end
 
-    test "sets the current_user in context when the token is correct",
-    %{conn: conn, token: token} do
+    test "sets the current_user in context when the token is correct", %{conn: conn, token: token} do
       conn =
         conn
         |> put_req_header("authorization", "Bearer " <> token)
@@ -29,8 +28,7 @@ defmodule BartenderPlugTest do
       assert context == %{current_user: %{test: true}}
     end
 
-    test "does not set a current_user in context when the token is bad",
-    %{conn: conn} do
+    test "does not set a current_user in context when the token is bad", %{conn: conn} do
       conn =
         conn
         |> put_req_header("authorization", "Bearer bad_token")
@@ -39,8 +37,7 @@ defmodule BartenderPlugTest do
       assert context == %{}
     end
 
-    test "does not set a current_user in context when the token is missing",
-    %{conn: conn} do
+    test "does not set a current_user in context when the token is missing", %{conn: conn} do
       %{private: %{absinthe: %{context: context}}} = Bartender.Plug.call(conn, GuardianHelper)
       assert context == %{}
     end

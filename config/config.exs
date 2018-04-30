@@ -30,5 +30,5 @@ use Mix.Config
 #     import_config "#{Mix.env}.exs"
 
 config :bartender, GuardianHelper,
-       issuer: "bartender",
-       secret_key: "new-new-internet"
+  issuer: "bartender",
+  secret_key: "new-new-internet"

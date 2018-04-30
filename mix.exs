@@ -18,7 +18,7 @@ defmodule Bartender.MixProject do
       licenses: ["MIT"],
       maintainers: ["Cameron Irmas"],
       links: %{"GitHub" => "https://github.com/camirmas/bartender"},
-      source_url: "https://github.com/camirmas/bartender",
+      source_url: "https://github.com/camirmas/bartender"
     ]
   end
 

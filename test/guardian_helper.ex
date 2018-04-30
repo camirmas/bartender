@@ -7,8 +7,9 @@ defmodule GuardianHelper do
 
   def resource_from_claims(claims) do
     id = claims["sub"]
+
     if id == "ok" do
-      {:ok,  %{test: true}}
+      {:ok, %{test: true}}
     else
       {:error, "Not found"}
     end
